@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ans 3</title>
+    <style>
+      div {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      .circle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 10%;
+        border: 10px solid #ccc;
+        border-left-color: rgb(0, 0, 255, 0.671);
+        border-radius: 50%;
+        height: 20%;
+        transform: translate(-60%, -60%);
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="circle"></div>
+    </div>
+  </body>
+</html>

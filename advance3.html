@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ans 2</title>
+    <style>
+      div {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 800px;
+      }
+      .cube {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(20deg) rotateY(30deg);
+      }
+      .side {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(87, 87, 245);
+        border: 1px solid black;
+        font-size: 20px;
+        font-weight: bolder;
+
+        opacity: 0.7;
+      }
+      .front {
+        transform: translateZ(100px);
+      }
+      .back {
+        transform: rotateY(180deg) translateZ(100px);
+      }
+      .right {
+        transform: rotateY(90deg) translateZ(100px);
+      }
+      .left {
+        transform: rotateY(-90deg) translateZ(100px);
+      }
+      .top {
+        transform: rotateX(90deg) translateZ(100px);
+      }
+      .bottom {
+        transform: rotateX(-90deg) translateZ(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="cube">
+        <div class="side front">Front</div>
+        <div class="side back">Back</div>
+        <div class="side right">Right</div>
+        <div class="side left">Left</div>
+        <div class="side top">Top</div>
+        <div class="side bottom">Bottom</div>
+      </div>
+    </div>
+  </body>
+</html>
